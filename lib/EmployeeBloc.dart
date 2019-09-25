@@ -19,20 +19,26 @@ class EmployeeBloc {
   // * Increment Salary StreamController takes Employee object as an argument
   final _employeeSalaryDecStreamController = StreamController<Employee>();
 
+  // ! Stream is actual output of data
   Stream<List<Employee>> get employeeListStream =>
       _employeeListStreamController.stream;
 
+  // ! Sink is actual input of data
   StreamSink<List<Employee>> get employeeListSink =>
       _employeeListStreamController.sink;
 
   StreamSink<Employee> get employeeSalaryInc =>
       _employeeSalaryIncStreamController.sink;
+
   StreamSink<Employee> get employeeSalaryDec =>
       _employeeSalaryDecStreamController.sink;
 
+  // ! Contructor init data and listen to changes done by methods
   EmployeeBloc() {
+    // * this is actual data
     _employeeListStreamController.add(_employeeList);
 
+    // * Methods that changes data need to listen
     _employeeSalaryIncStreamController.stream.listen(_incSalary);
     _employeeSalaryDecStreamController.stream.listen(_decSalary);
   }
@@ -55,6 +61,7 @@ class EmployeeBloc {
     employeeListSink.add(_employeeList);
   }
 
+  // ! dispose() helps to free up the resources
   void dispose() {
     _employeeSalaryIncStreamController.close();
     _employeeSalaryDecStreamController.close();
