@@ -6,6 +6,4 @@
 
 # Stream is output of the data
 
-`
-
 # Sink is the input of the data
