@@ -8,6 +8,11 @@ class EmployeeBloc {
     Employee(3, "User 3 ", 30000),
     Employee(4, "User 4 ", 40000),
     Employee(5, "User 5 ", 50000),
+    Employee(6, "User 6 ", 60000),
+    Employee(7, "User 7 ", 70000),
+    Employee(8, "User 8 ", 80000),
+    Employee(9, "User 9 ", 90000),
+    Employee(10, "User 10 ", 100000),
   ];
 
   // * Stream controller takes a List of Employee Objects as an argument

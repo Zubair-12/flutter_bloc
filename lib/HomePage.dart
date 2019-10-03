@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Employee App"),
+        title: Text("Employee App BLOC Demo"),
       ),
       body: Container(
         child: StreamBuilder<List<Employee>>(
@@ -31,7 +31,15 @@ class _HomePageState extends State<HomePage> {
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
                 return Card(
-                  elevation: 6.0,
+                  elevation: 5.0,
+                  margin: EdgeInsets.only(
+                    left: 16.0,
+                    right: 16.0,
+                    top: 20.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                  ),
                   child: Container(
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
