@@ -1,5 +1,5 @@
 # flutter_bloc Demo
-A Demo App for Flutter BLOC Structure by showing Employee Data.
+A Demo App for Flutter BLOC Structure using Employee Data.
 
 ## A Simple flutter_bloc structure demo
 
